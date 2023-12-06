@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::ProductionOrder *ui;
+
 };
 
 #endif // PRODUCTIONORDER_H

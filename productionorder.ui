@@ -6,258 +6,192 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>535</width>
-    <height>853</height>
+    <width>492</width>
+    <height>592</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_prodOrder_id">
+  <widget class="QScrollArea" name="scrollArea">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>20</y>
-     <width>171</width>
-     <height>16</height>
+     <width>401</width>
+     <height>351</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Номер производственного заказа</string>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_prodOrder_id">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>20</y>
-     <width>161</width>
-     <height>21</height>
-    </rect>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
    </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEdit_reg">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>60</y>
-     <width>110</width>
-     <height>22</height>
-    </rect>
+   <property name="widgetResizable">
+    <bool>true</bool>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_dateReg">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Дата регистрации</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_productType">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>110</y>
-     <width>141</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Вид ГП/сервисные услуги</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_productType">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>110</y>
-     <width>161</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_specification">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>160</y>
-     <width>151</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Ресурсная спецификация</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tableWidget_steps">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>230</y>
-     <width>411</width>
-     <height>192</height>
-    </rect>
-   </property>
-   <attribute name="horizontalHeaderMinimumSectionSize">
-    <number>30</number>
-   </attribute>
-   <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>111</number>
-   </attribute>
-   <column>
-    <property name="text">
-     <string>Наименование этапа</string>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>385</width>
+      <height>412</height>
+     </rect>
     </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Описание</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="label_steps">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>200</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Этапы выполнение</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tableWidget_materials">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>470</y>
-     <width>511</width>
-     <height>192</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string>Материал</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Наименование</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>ед. измерения</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Количество</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="label_entrance">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>680</y>
-     <width>161</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Дата поступления на склад ГП</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEdit_entrance">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>680</y>
-     <width>110</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_foreman">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>720</y>
-     <width>161</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>ФИО Бригадира</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_foreman">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>720</y>
-     <width>271</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_save">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>810</y>
-     <width>80</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Сохранить</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_cancel">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>810</y>
-     <width>80</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Отменить</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_total">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>770</y>
-     <width>47</width>
-     <height>14</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Итого</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_total">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>760</y>
-     <width>261</width>
-     <height>21</height>
-    </rect>
-   </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_prodOrder_id">
+       <property name="text">
+        <string>Номер производственного заказа</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_prodOrder_id"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_dateReg">
+       <property name="text">
+        <string>Дата регистрации</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateEdit" name="dateEdit_reg"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_productType">
+       <property name="text">
+        <string>Вид ГП/сервисные услуги</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBox_productType"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButton_specification">
+       <property name="text">
+        <string>Ресурсная спецификация</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_steps">
+       <property name="text">
+        <string>Этапы выполнение</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QTableWidget" name="tableWidget_steps">
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>30</number>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>111</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>Наименование этапа</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Описание</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="QTableWidget" name="tableWidget_materials">
+       <column>
+        <property name="text">
+         <string>Материал</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Наименование</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>ед. измерения</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Количество</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_entrance">
+       <property name="text">
+        <string>Дата поступления на склад ГП</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QDateEdit" name="dateEdit_entrance"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_foreman">
+       <property name="text">
+        <string>ФИО Бригадира</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="lineEdit_foreman"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_total">
+       <property name="text">
+        <string>Итого</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="lineEdit_total"/>
+     </item>
+     <item row="10" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_save">
+         <property name="text">
+          <string>Сохранить</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_cancel">
+         <property name="text">
+          <string>Отменить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <resources/>

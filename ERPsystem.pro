@@ -1,4 +1,5 @@
 QT       += core gui
+QT += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,6 +11,7 @@ CONFIG += c++11
 
 SOURCES += \
     cashflow.cpp \
+    databaseconnector.cpp \
     inventorybalances.cpp \
     main.cpp \
     erpsystem.cpp \
@@ -19,6 +21,7 @@ SOURCES += \
 
 HEADERS += \
     cashflow.h \
+    databaseconnector.h \
     erpsystem.h \
     inventorybalances.h \
     productionorder.h \
