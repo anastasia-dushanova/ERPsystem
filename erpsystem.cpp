@@ -8,6 +8,8 @@ ERPsystem::ERPsystem(QWidget *parent)
     ui->setupUi(this);
     dbConnector = new DataBaseConnector(this);
     ui->stackedWidget->setCurrentIndex(0);
+    ui->pushButton_exit->hide();
+    ui->label_type->hide();
 //    ProductionOrder* produc = new ProductionOrder(this);
 //    produc->show();
 //    ui->stackedWidget->addWidget(produc);
@@ -43,9 +45,26 @@ void ERPsystem::on_pushButton_ok_clicked()
 }
 
 void ERPsystem::startPorductionOrder(){
+    ui->label_type->show();
+    ui->label_type->clear();
+    ui->label_type->setText("Производственный отдел");
+    ui->pushButton_exit->show();
+
     ui->stackedWidget->setCurrentIndex(1);
 }
 
 void ERPsystem::startSalesOrder(){
+    ui->label_type->show();
+    ui->label_type->clear();
+    ui->label_type->setText("Отдел продаж");
+    ui->pushButton_exit->show();
     ui->stackedWidget->setCurrentIndex(2);
 }
+
+void ERPsystem::on_pushButton_exit_clicked()
+{
+    ui->label_type->hide();
+    ui->pushButton_exit->hide();
+    ui->stackedWidget->setCurrentIndex(0);
+}
+

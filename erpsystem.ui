@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>70</y>
       <width>691</width>
-      <height>531</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -32,7 +32,7 @@
        <rect>
         <x>290</x>
         <y>160</y>
-        <width>91</width>
+        <width>111</width>
         <height>16</height>
        </rect>
       </property>
@@ -103,6 +103,32 @@
     <widget class="SalesOrder" name="page_sales"/>
     <widget class="ProductionOrder" name="page_product"/>
    </widget>
+   <widget class="QLabel" name="label_type">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>20</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>542</x>
+      <y>10</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выйти</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -110,7 +136,7 @@
      <x>0</x>
      <y>0</y>
      <width>707</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
