@@ -6,6 +6,8 @@ TechnologicalCard::TechnologicalCard(QWidget *parent) :
     ui(new Ui::TechnologicalCard)
 {
     ui->setupUi(this);
+
+//    setFixedSize(QSize(1900, 1080));
 }
 
 TechnologicalCard::~TechnologicalCard()

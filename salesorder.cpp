@@ -6,6 +6,8 @@ SalesOrder::SalesOrder(QWidget *parent) :
     ui(new Ui::SalesOrder)
 {
     ui->setupUi(this);
+
+//    setFixedSize(QSize(1900, 1080));
 }
 
 SalesOrder::~SalesOrder()

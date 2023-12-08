@@ -6,6 +6,8 @@ ProductionOrder::ProductionOrder(QWidget *parent) :
     ui(new Ui::ProductionOrder)
 {
     ui->setupUi(this);
+
+//    setFixedSize(QSize(1900, 1080));
 }
 
 ProductionOrder::~ProductionOrder()

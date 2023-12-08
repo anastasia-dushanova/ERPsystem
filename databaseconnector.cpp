@@ -31,8 +31,8 @@ int DataBaseConnector::getRole(QString login, QString password){
     selectQ.bindValue(":password", password);
     selectQ.exec();
 
-    if(selectQ.lastError().text() == " ")
-        qDebug() << selectQ.lastError().text();
+//    if(selectQ.lastError().text() == " ")
+//        qDebug() << selectQ.lastError().text();
 
     int roleId{-1};
     if(selectQ.first())
