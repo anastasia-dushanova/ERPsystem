@@ -18,7 +18,8 @@ class ERPsystem : public QMainWindow
 public:
     enum class Role : int {
         Role_Manager = 1,
-        Role_Employee
+        Role_Employee,
+        Role_Accounting
     };
 
     ERPsystem(QWidget *parent = nullptr);
@@ -29,6 +30,10 @@ private slots:
 
     void on_pushButton_exit_clicked();
 
+    void slotConsider();
+
+    void slotShowSalesOrder();
+
 private:
     Ui::ERPsystem *ui;
 
@@ -37,5 +42,9 @@ private:
     void startPorductionOrder();
 
     void startSalesOrder();
+
+    void startAccounting();
+
+    void clearAndShow();
 };
 #endif // ERPSYSTEM_H

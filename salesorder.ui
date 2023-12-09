@@ -190,7 +190,7 @@
        <x>10</x>
        <y>870</y>
        <width>1801</width>
-       <height>33</height>
+       <height>39</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -229,7 +229,7 @@
        <x>10</x>
        <y>540</y>
        <width>1771</width>
-       <height>86</height>
+       <height>111</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -239,17 +239,20 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="2">
+       <widget class="QRadioButton" name="radioButton_yes">
+        <property name="text">
+         <string>Да</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="3">
+       <widget class="QLineEdit" name="lineEdit_managerName"/>
+      </item>
       <item row="0" column="3">
        <widget class="QRadioButton" name="radioButton_no">
         <property name="text">
          <string>Нет</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_managerName">
-        <property name="text">
-         <string>Менеджер продаж</string>
         </property>
        </widget>
       </item>
@@ -260,15 +263,19 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
-       <widget class="QRadioButton" name="radioButton_yes">
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_managerName">
         <property name="text">
-         <string>Да</string>
+         <string>Менеджер продаж</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1" colspan="3">
-       <widget class="QLineEdit" name="lineEdit_managerName"/>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Показать зарезервированную ГП</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

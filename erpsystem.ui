@@ -29,7 +29,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_main">
      <widget class="QWidget" name="layoutWidget">
@@ -147,6 +147,7 @@
     </widget>
     <widget class="SalesOrder" name="page_sales"/>
     <widget class="ProductionOrder" name="page_product"/>
+    <widget class="Accounting" name="page_accounting"/>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
@@ -154,7 +155,7 @@
       <x>20</x>
       <y>10</y>
       <width>1851</width>
-      <height>33</height>
+      <height>39</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -194,7 +195,7 @@
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>31</height>
+     <height>37</height>
     </rect>
    </property>
   </widget>
@@ -211,6 +212,12 @@
    <class>ProductionOrder</class>
    <extends>QWidget</extends>
    <header>productionorder.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Accounting</class>
+   <extends>QWidget</extends>
+   <header>accounting.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

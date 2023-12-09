@@ -16,6 +16,8 @@ ERPsystem::ERPsystem(QWidget *parent)
 //    ui->stackedWidget->setCurrentIndex(2);
 
 //    ui->stackedWidget->setFixedSize(QSize(1890, 930));
+    connect(ui->stackedWidget->widget(3), SIGNAL(consider()), this, SLOT(slotConsider()));
+    connect(ui->stackedWidget->widget(3), SIGNAL(showSalesOrder()), this, SLOT(slotShowSalesOrder()));
 }
 
 ERPsystem::~ERPsystem()
@@ -45,6 +47,10 @@ void ERPsystem::on_pushButton_ok_clicked()
         startSalesOrder();
         break;
     }
+    case static_cast<int>(Role::Role_Accounting) : {
+        startAccounting();
+        break;
+    }
     default: {
         QMessageBox::warning(this, "Внимание", "Такого пользователя нет");
         break;
@@ -53,23 +59,33 @@ void ERPsystem::on_pushButton_ok_clicked()
 }
 
 void ERPsystem::startPorductionOrder(){
-    ui->label_type->show();
-    ui->label_type->clear();
+
+    clearAndShow();
     ui->label_type->setText("Производственный отдел");
-    ui->pushButton_exit->show();
-    ui->lineEdit_login->clear();
-    ui->lineEdit_password->clear();
     ui->stackedWidget->setCurrentIndex(2);
 }
 
 void ERPsystem::startSalesOrder(){
+
+    clearAndShow();
+    ui->label_type->setText("Отдел продаж");
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void ERPsystem::startAccounting()
+{
+    clearAndShow();
+    ui->label_type->setText("Бухгалтерия");
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+void ERPsystem::clearAndShow(){
+
     ui->label_type->show();
     ui->label_type->clear();
-    ui->label_type->setText("Отдел продаж");
     ui->pushButton_exit->show();
     ui->lineEdit_login->clear();
     ui->lineEdit_password->clear();
-    ui->stackedWidget->setCurrentIndex(1);
 }
 
 void ERPsystem::on_pushButton_exit_clicked()
@@ -77,5 +93,15 @@ void ERPsystem::on_pushButton_exit_clicked()
     ui->label_type->hide();
     ui->pushButton_exit->hide();
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void ERPsystem::slotConsider()
+{
+    QMessageBox::information(this, "", "учтенно");
+}
+
+void ERPsystem::slotShowSalesOrder()
+{
+    QMessageBox::information(this, "", "показываю");
 }
 

@@ -10,6 +10,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    accounting.cpp \
     cashflow.cpp \
     databaseconnector.cpp \
     inventorybalances.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     technologicalcard.cpp
 
 HEADERS += \
+    accounting.h \
     cashflow.h \
     databaseconnector.h \
     erpsystem.h \
@@ -29,6 +31,7 @@ HEADERS += \
     technologicalcard.h
 
 FORMS += \
+    accounting.ui \
     cashflow.ui \
     erpsystem.ui \
     inventorybalances.ui \

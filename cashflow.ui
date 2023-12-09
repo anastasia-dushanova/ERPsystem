@@ -6,174 +6,90 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>692</width>
     <height>333</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_number">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>47</width>
-     <height>14</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Номер</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_number">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>40</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_date">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>80</y>
-     <width>47</width>
-     <height>14</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Дата</string>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEdit">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>80</y>
-     <width>110</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_bankSender">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>120</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Банк отправитель</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_bankReceiver">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>160</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Банк получатель</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_counterpartySender">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>200</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Контрагент отправитель</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_counterpartyReceiver">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>121</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Контрагет получатель</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_payment">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>280</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Формулировка платежа</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_bankSender">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>120</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_bankReceiver">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>150</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_counterpartySender">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>200</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_counterpartyReceiver">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>240</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_payment">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>280</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_number">
+     <property name="text">
+      <string>Номер</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_number"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_date">
+     <property name="text">
+      <string>Дата</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QDateEdit" name="dateEdit"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_bankSender">
+     <property name="text">
+      <string>Банк отправитель</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLineEdit" name="lineEdit_bankSender"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_bankReceiver">
+     <property name="text">
+      <string>Банк получатель</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLineEdit" name="lineEdit_bankReceiver"/>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLabel" name="label_counterpartySender">
+     <property name="text">
+      <string>Контрагент отправитель</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLineEdit" name="lineEdit_counterpartySender"/>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="label_counterpartyReceiver">
+     <property name="text">
+      <string>Контрагет получатель</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLineEdit" name="lineEdit_counterpartyReceiver"/>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QLabel" name="label_payment">
+     <property name="text">
+      <string>Формулировка платежа</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QLineEdit" name="lineEdit_payment"/>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

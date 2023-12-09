@@ -2,6 +2,8 @@
 #define PRODUCTIONORDER_H
 
 #include <QWidget>
+#include <QMessageBox>
+#include <technologicalcard.h>
 
 namespace Ui {
 class ProductionOrder;
@@ -15,8 +17,17 @@ public:
     explicit ProductionOrder(QWidget *parent = nullptr);
     ~ProductionOrder();
 
+private slots:
+    void on_pushButton_specification_clicked();
+
+    void on_pushButton_save_clicked();
+
+    void on_pushButton_cancel_clicked();
+
 private:
     Ui::ProductionOrder *ui;
+
+    TechnologicalCard* card;
 
 };
 

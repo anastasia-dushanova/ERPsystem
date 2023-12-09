@@ -15,6 +15,9 @@ public:
     explicit TechnologicalCard(QWidget *parent = nullptr);
     ~TechnologicalCard();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::TechnologicalCard *ui;
 };

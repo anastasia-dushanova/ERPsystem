@@ -8,9 +8,18 @@ TechnologicalCard::TechnologicalCard(QWidget *parent) :
     ui->setupUi(this);
 
 //    setFixedSize(QSize(1900, 1080));
+    ui->tableWidget->setColumnWidth(0, 150);
+    ui->tableWidget->setColumnWidth(1, 150);
+    ui->tableWidget->setColumnWidth(2, 150);
 }
 
 TechnologicalCard::~TechnologicalCard()
 {
     delete ui;
 }
+
+void TechnologicalCard::on_pushButton_clicked()
+{
+    close();
+}
+

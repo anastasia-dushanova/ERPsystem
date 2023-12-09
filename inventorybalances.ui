@@ -6,19 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
+    <width>978</width>
     <height>546</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Складские остатки</string>
   </property>
   <widget class="QTableWidget" name="tableWidget_products">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>60</y>
-     <width>711</width>
+     <width>891</width>
      <height>192</height>
     </rect>
    </property>
@@ -62,9 +67,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>30</y>
-     <width>181</width>
-     <height>16</height>
+     <y>15</y>
+     <width>371</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -75,9 +80,9 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>310</y>
-     <width>351</width>
-     <height>16</height>
+     <y>295</y>
+     <width>731</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -89,7 +94,7 @@
     <rect>
      <x>30</x>
      <y>340</y>
-     <width>701</width>
+     <width>881</width>
      <height>192</height>
     </rect>
    </property>
