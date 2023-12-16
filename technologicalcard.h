@@ -2,6 +2,7 @@
 #define TECHNOLOGICALCARD_H
 
 #include <QWidget>
+#include <QDebug>
 
 namespace Ui {
 class TechnologicalCard;
@@ -15,8 +16,16 @@ public:
     explicit TechnologicalCard(QWidget *parent = nullptr);
     ~TechnologicalCard();
 
-private slots:
-    void on_pushButton_clicked();
+    void addProductInfo(QString name, int inReserve);
+
+    void addNewResource(QString product, QString material, int count);
+
+    void deleteResource();
+
+    QList<QPair<QString, QString>> getProducts();
+
+    QList<QPair<QString, QString>> getMaterials();
+
 
 private:
     Ui::TechnologicalCard *ui;

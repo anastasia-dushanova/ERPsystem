@@ -3,7 +3,8 @@
 
 #include <QWidget>
 #include <QMessageBox>
-#include <technologicalcard.h>
+#include <databaseconnector.h>
+#include <addnewresource.h>
 
 namespace Ui {
 class ProductionOrder;
@@ -17,17 +18,32 @@ public:
     explicit ProductionOrder(QWidget *parent = nullptr);
     ~ProductionOrder();
 
-private slots:
-    void on_pushButton_specification_clicked();
+public slots:
+    void setCurrentEmployee(QString login) { this->currentEmployee = login; }
 
+private slots:
     void on_pushButton_save_clicked();
 
     void on_pushButton_cancel_clicked();
 
+    void slotSetReservedProducts(const QString& text);
+
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_delete_clicked();
+
+    void slotAddNewResource(QString product, QString material, int count);
+
 private:
+
     Ui::ProductionOrder *ui;
 
-    TechnologicalCard* card;
+    DataBaseConnector* dbConnector;
+
+    AddNewResource* newResource;
+
+    QString currentEmployee;
+
 
 };
 

@@ -17,7 +17,9 @@ ERPsystem::ERPsystem(QWidget *parent)
 
 //    ui->stackedWidget->setFixedSize(QSize(1890, 930));
     connect(ui->stackedWidget->widget(3), SIGNAL(consider()), this, SLOT(slotConsider()));
-    connect(ui->stackedWidget->widget(3), SIGNAL(showSalesOrder()), this, SLOT(slotShowSalesOrder()));
+    connect(this, SIGNAL(newEmployeeProduct(QString)), ui->stackedWidget->widget(2), SLOT(setCurrentEmployee(QString)));
+    connect(this, SIGNAL(newEmployeeSales(QString)), ui->stackedWidget->widget(1), SLOT(setCurrentEmployee(QString)));
+    connect(this, SIGNAL(newEmployeeAccounting(QString)), ui->stackedWidget->widget(3), SLOT(setCurrentEmployee(QString)));
 }
 
 ERPsystem::~ERPsystem()
@@ -40,14 +42,17 @@ void ERPsystem::on_pushButton_ok_clicked()
 //    qDebug() << QString::number(roleId);
     switch(roleId){
     case static_cast<int>(Role::Role_Employee) : {
+        emit newEmployeeProduct(login);
         startPorductionOrder();
         break;
     }
     case static_cast<int>(Role::Role_Manager) : {
+        emit newEmployeeSales(login);
         startSalesOrder();
         break;
     }
     case static_cast<int>(Role::Role_Accounting) : {
+        emit newEmployeeAccounting(login);
         startAccounting();
         break;
     }
@@ -70,6 +75,7 @@ void ERPsystem::startSalesOrder(){
     clearAndShow();
     ui->label_type->setText("Отдел продаж");
     ui->stackedWidget->setCurrentIndex(1);
+
 }
 
 void ERPsystem::startAccounting()
@@ -97,11 +103,6 @@ void ERPsystem::on_pushButton_exit_clicked()
 
 void ERPsystem::slotConsider()
 {
-    QMessageBox::information(this, "", "учтенно");
+//    QMessageBox::information(this, "", "учтенно");
+    static_cast<SalesOrder*>(ui->stackedWidget->widget(1))->consider();
 }
-
-void ERPsystem::slotShowSalesOrder()
-{
-    QMessageBox::information(this, "", "показываю");
-}
-

@@ -2,6 +2,7 @@
 #define INVENTORYBALANCES_H
 
 #include <QWidget>
+#include <productinfo.h>
 
 namespace Ui {
 class InventoryBalances;
@@ -14,6 +15,12 @@ class InventoryBalances : public QWidget
 public:
     explicit InventoryBalances(QWidget *parent = nullptr);
     ~InventoryBalances();
+
+    void addProduct(ProductInfo pr);
+    void addMaterial(ProductInfo pr);
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::InventoryBalances *ui;

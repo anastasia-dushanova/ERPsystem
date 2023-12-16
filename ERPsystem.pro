@@ -11,27 +11,35 @@ CONFIG += c++11
 
 SOURCES += \
     accounting.cpp \
+    addnewresource.cpp \
+    arrears.cpp \
     cashflow.cpp \
     databaseconnector.cpp \
     inventorybalances.cpp \
     main.cpp \
     erpsystem.cpp \
+    productinfo.cpp \
     productionorder.cpp \
     salesorder.cpp \
     technologicalcard.cpp
 
 HEADERS += \
     accounting.h \
+    addnewresource.h \
+    arrears.h \
     cashflow.h \
     databaseconnector.h \
     erpsystem.h \
     inventorybalances.h \
+    productinfo.h \
     productionorder.h \
     salesorder.h \
     technologicalcard.h
 
 FORMS += \
     accounting.ui \
+    addnewresource.ui \
+    arrears.ui \
     cashflow.ui \
     erpsystem.ui \
     inventorybalances.ui \

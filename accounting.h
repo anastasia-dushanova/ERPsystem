@@ -17,17 +17,21 @@ public:
     explicit Accounting(QWidget *parent = nullptr);
     ~Accounting();
 
+public slots:
+    void setCurrentEmployee(QString curr) { this->currentEmployee = curr; }
+
+
 signals:
     void consider();
-    void showSalesOrder();
 
 private slots:
-    void on_pushButton_show_clicked();
 
     void on_pushButton_consider_clicked();
 
 private:
     Ui::Accounting *ui;
+
+    QString currentEmployee;
 };
 
 #endif // ACCOUNTING_H

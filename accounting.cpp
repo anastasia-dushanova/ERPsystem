@@ -3,7 +3,8 @@
 
 Accounting::Accounting(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Accounting)
+    ui(new Ui::Accounting),
+    currentEmployee("")
 {
     ui->setupUi(this);
 }
@@ -11,11 +12,6 @@ Accounting::Accounting(QWidget *parent) :
 Accounting::~Accounting()
 {
     delete ui;
-}
-
-void Accounting::on_pushButton_show_clicked()
-{
-    emit showSalesOrder();
 }
 
 

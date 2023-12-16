@@ -3,20 +3,17 @@
 
 ProductionOrder::ProductionOrder(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::ProductionOrder)
+    ui(new Ui::ProductionOrder),
+    currentEmployee("")
 {
     ui->setupUi(this);
 
-//    setFixedSize(QSize(1900, 1080));
-    ui->tableWidget_materials->setColumnWidth(0, 150);
-    ui->tableWidget_materials->setColumnWidth(1, 150);
-    ui->tableWidget_materials->setColumnWidth(2, 150);
-    ui->tableWidget_materials->setColumnWidth(3, 150);
+    dbConnector = new DataBaseConnector(this);
 
-    ui->tableWidget_steps->setColumnWidth(0, 170);
-    ui->tableWidget_steps->setColumnWidth(0, 150);
+    newResource = new AddNewResource();
 
-    card = new TechnologicalCard();
+    connect(ui->comboBox_productType, SIGNAL(currentIndexChanged(const QString&)), this, SLOT(slotSetReservedProducts(const QString&)));
+    connect(newResource, SIGNAL(addNewResource(QString, QString, int)), this, SLOT(slotAddNewResource(QString, QString, int)));
 }
 
 ProductionOrder::~ProductionOrder()
@@ -24,22 +21,89 @@ ProductionOrder::~ProductionOrder()
     delete ui;
 }
 
-void ProductionOrder::on_pushButton_specification_clicked()
-{
-
-    card->show();
-}
-
-
 void ProductionOrder::on_pushButton_save_clicked()
 {
     //сохранить
-    QMessageBox::information(this, "Сохранение", "Сохранено");
+
+    QString foreman = ui->lineEdit_foreman->text();
+
+    qDebug() << foreman;
+
+    QString id = ui->lineEdit_prodOrder_id->text();
+
+    qDebug() << id;
+
+    QString total = ui->lineEdit_total->text();
+
+    qDebug() << total;
+
+    QList<QPair<QString, QString>> listProducts = ui->card->getProducts();
+    QList<QPair<QString, QString>> listMaterail = ui->card->getMaterials();
+
+    qDebug() << "listProducts.size()"<<listProducts.size();
+    qDebug() << "listMaterail.size()"<<listMaterail.size();
+
+    qDebug() << "currentEmployee "<<currentEmployee;
+
+    QString date_reg = ui->dateEdit_reg->text();
+
+    qDebug() << date_reg;
+
+    QString date_ent = ui->dateEdit_entrance->text();
+
+    qDebug() << date_ent;
+
+    QString type = ui->comboBox_productType->currentText();
+
+    qDebug() << type;
+
+    //ВНИМАНИЕ - костыль, в списке ГП только один ГП
+    int product_order_id = dbConnector->considerProductionOrder(currentEmployee, date_reg, date_ent, foreman, listProducts[0].first);
+
+    if(listMaterail.size() != 0){
+        int totalMaterial = dbConnector->updateMaterials(listMaterail);
+        qDebug() << "totalMaterial = "<<totalMaterial;
+    }
+
+    if(product_order_id > 0)
+        QMessageBox::information(this, "Сохранение", "Сохранено");
 }
 
 
 void ProductionOrder::on_pushButton_cancel_clicked()
 {
     //очистить все поля
+    ui->lineEdit_foreman->clear();
+    ui->lineEdit_prodOrder_id->clear();
+    ui->lineEdit_total->clear();
+}
+
+void ProductionOrder::slotSetReservedProducts(const QString& text)
+{
+    if(text != "Пусконаладочные работы")
+        return;
+
+    int productInfo = dbConnector->getProductInReserve();
+//    qDebug() << QString::number(productInfo);
+
+    ui->card->addProductInfo("ГП1", productInfo);
+}
+
+
+void ProductionOrder::on_pushButton_add_clicked()
+{
+    newResource->show();
+
+}
+
+
+void ProductionOrder::on_pushButton_delete_clicked()
+{
+    ui->card->deleteResource();
+}
+
+void ProductionOrder::slotAddNewResource(QString product, QString material, int count)
+{
+    ui->card->addNewResource(product, material, count);
 }
 

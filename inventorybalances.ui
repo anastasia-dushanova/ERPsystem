@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>978</width>
-    <height>546</height>
+    <width>1241</width>
+    <height>646</height>
    </rect>
   </property>
   <property name="font">
@@ -18,107 +18,130 @@
   <property name="windowTitle">
    <string>Складские остатки</string>
   </property>
-  <widget class="QTableWidget" name="tableWidget_products">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>891</width>
-     <height>192</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string>Артикул</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Наименование</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Ед. измерения</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Новый столбец</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>В наличии</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>В резерве</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Доступно</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>15</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Остатки и доступность Склада ГП</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>295</y>
-     <width>731</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Остатки и доступность Склада Сырья, материалов, комплектующих</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tableWidget_material">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>340</y>
-     <width>881</width>
-     <height>192</height>
-    </rect>
-   </property>
-   <column>
-    <property name="text">
-     <string>Артикул</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Наименование</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Ед. измерения</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Количество</string>
-    </property>
-   </column>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1207</width>
+        <height>626</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="3" column="0" colspan="3">
+        <widget class="QTableWidget" name="tableWidget_material">
+         <column>
+          <property name="text">
+           <string>Артикул</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Наименование</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ед. измерения</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Количество</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Закрыть</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Склад ГП</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QTableWidget" name="tableWidget_products">
+         <column>
+          <property name="text">
+           <string>Артикул</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Наименование</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ед. измерения</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Себестоимость</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>В наличии</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>В резерве</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Доступно</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>798</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0" colspan="3">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Склада Сырья, материалов, комплектующих</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

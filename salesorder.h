@@ -2,7 +2,11 @@
 #define SALESORDER_H
 
 #include <QWidget>
+#include <QMessageBox>
+#include <databaseconnector.h>
+#include <productinfo.h>
 #include <inventorybalances.h>
+#include <arrears.h>
 
 namespace Ui {
 class SalesOrder;
@@ -16,10 +20,7 @@ public:
     explicit SalesOrder(QWidget *parent = nullptr);
     ~SalesOrder();
 
-    void setLineEdit(QString line);
-
-signals:
-    void emitSalesOrder(QString line);
+    void consider();
 
 private slots:
     void on_pushButton_save_clicked();
@@ -28,10 +29,24 @@ private slots:
 
     void on_pushButton_clicked();
 
+public slots:
+    void setCurrentEmployee(QString emp) { this->currentEmployee=emp; }
+
 private:
+
+
     Ui::SalesOrder *ui;
 
+    DataBaseConnector* db;
+
     InventoryBalances* balances;
+
+    Arrears* arrears;
+
+    void setProduct();
+
+    QString currentEmployee;
+
 };
 
 #endif // SALESORDER_H

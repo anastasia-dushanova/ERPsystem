@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>692</width>
-    <height>333</height>
+    <height>348</height>
    </rect>
   </property>
   <property name="font">
@@ -26,8 +26,12 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="2">
-    <widget class="QLineEdit" name="lineEdit_number"/>
+   <item row="0" column="2" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_number">
+     <property name="text">
+      <string>79641315911</string>
+     </property>
+    </widget>
    </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_date">
@@ -36,58 +40,124 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1" colspan="2">
-    <widget class="QDateEdit" name="dateEdit"/>
+   <item row="1" column="2" colspan="2">
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="date">
+      <date>
+       <year>2023</year>
+       <month>1</month>
+       <day>10</day>
+      </date>
+     </property>
+    </widget>
    </item>
-   <item row="2" column="0">
+   <item row="2" column="0" colspan="2">
     <widget class="QLabel" name="label_bankSender">
      <property name="text">
       <string>Банк отправитель</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="2">
-    <widget class="QLineEdit" name="lineEdit_bankSender"/>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="lineEdit_bankSender">
+     <property name="text">
+      <string>ПАО ВТБ</string>
+     </property>
+    </widget>
    </item>
-   <item row="3" column="0">
+   <item row="3" column="0" colspan="2">
     <widget class="QLabel" name="label_bankReceiver">
      <property name="text">
       <string>Банк получатель</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="2">
-    <widget class="QLineEdit" name="lineEdit_bankReceiver"/>
+   <item row="3" column="3">
+    <widget class="QLineEdit" name="lineEdit_bankReceiver">
+     <property name="text">
+      <string>ПАО Сбербанк</string>
+     </property>
+    </widget>
    </item>
-   <item row="4" column="0" colspan="2">
+   <item row="4" column="0" colspan="3">
     <widget class="QLabel" name="label_counterpartySender">
      <property name="text">
       <string>Контрагент отправитель</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="2">
-    <widget class="QLineEdit" name="lineEdit_counterpartySender"/>
+   <item row="4" column="3">
+    <widget class="QLineEdit" name="lineEdit_counterpartySender">
+     <property name="text">
+      <string>Колесиков Алексей Алексеевич</string>
+     </property>
+    </widget>
    </item>
-   <item row="5" column="0" colspan="2">
+   <item row="5" column="0" colspan="3">
     <widget class="QLabel" name="label_counterpartyReceiver">
      <property name="text">
       <string>Контрагет получатель</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="2">
-    <widget class="QLineEdit" name="lineEdit_counterpartyReceiver"/>
-   </item>
-   <item row="6" column="0" colspan="2">
-    <widget class="QLabel" name="label_payment">
+   <item row="5" column="3">
+    <widget class="QLineEdit" name="lineEdit_counterpartyReceiver">
      <property name="text">
-      <string>Формулировка платежа</string>
+      <string>Розеткин Денис Викторович</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="2">
-    <widget class="QLineEdit" name="lineEdit_payment"/>
+   <item row="6" column="0" colspan="2">
+    <widget class="QLabel" name="label_amountReceived">
+     <property name="text">
+      <string>Сумма полученная</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="3">
+    <widget class="QLineEdit" name="lineEdit_amountReceived">
+     <property name="text">
+      <string>8 100 000</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QLabel" name="label_amountPaid">
+     <property name="text">
+      <string>Сумма оплаченная</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="3">
+    <widget class="QLineEdit" name="lineEdit_amountPaid">
+     <property name="text">
+      <string>8 100 000</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="4">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_consider">
+       <property name="text">
+        <string>Учесть</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

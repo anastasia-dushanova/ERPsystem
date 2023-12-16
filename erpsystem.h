@@ -25,6 +25,11 @@ public:
     ERPsystem(QWidget *parent = nullptr);
     ~ERPsystem();
 
+signals:
+    void newEmployeeProduct(QString);
+    void newEmployeeSales(QString);
+    void newEmployeeAccounting(QString);
+
 private slots:
     void on_pushButton_ok_clicked();
 
@@ -32,12 +37,14 @@ private slots:
 
     void slotConsider();
 
-    void slotShowSalesOrder();
+//    void slotShowSalesOrder();
 
 private:
     Ui::ERPsystem *ui;
 
     DataBaseConnector* dbConnector;
+
+//    QString currentEmployee;
 
     void startPorductionOrder();
 
@@ -46,5 +53,9 @@ private:
     void startAccounting();
 
     void clearAndShow();
+
+//    void setCurrentEmloyee(QString login);
+
+//    QString getCurrentEmployee();
 };
 #endif // ERPSYSTEM_H

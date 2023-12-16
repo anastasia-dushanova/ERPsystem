@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Arrears</class>
+ <widget class="QWidget" name="Arrears">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1113</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Счет на оплату</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Счёт на оплату №1233455345</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_seller">
+     <property name="text">
+      <string>Продавец (поставщик):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="label_buyer">
+     <property name="text">
+      <string>Покупатель (заказчик):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Самый лучший поставщик</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Клиент 3</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Наименование товара</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Ед. измерения</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Количество</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Цена за ед. измерения</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Стоимость</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>6</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>ГП1</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string>шт.</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>500 000</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>500 000</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>Пусконаладочные работы</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>-</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>-</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>-</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>8 100 000</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string>Итого:</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string>8 600 000</string>
+      </property>
+     </item>
+     <item row="4" column="3">
+      <property name="text">
+       <string>В том числе НДС (20%)</string>
+      </property>
+     </item>
+     <item row="4" column="4">
+      <property name="text">
+       <string>83 333</string>
+      </property>
+     </item>
+     <item row="5" column="3">
+      <property name="text">
+       <string>Всего к оплате</string>
+      </property>
+     </item>
+     <item row="5" column="4">
+      <property name="text">
+       <string>8 683 333</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>608</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_save">
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

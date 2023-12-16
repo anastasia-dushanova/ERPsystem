@@ -45,88 +45,6 @@
       <height>918</height>
      </rect>
     </property>
-    <widget class="QPushButton" name="pushButton_specification">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>180</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Ресурсная спецификация</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_steps">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>240</y>
-       <width>281</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Этапы выполнение</string>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="tableWidget_steps">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>280</y>
-       <width>1531</width>
-       <height>192</height>
-      </rect>
-     </property>
-     <attribute name="horizontalHeaderMinimumSectionSize">
-      <number>30</number>
-     </attribute>
-     <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>111</number>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>Наименование этапа</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Описание</string>
-      </property>
-     </column>
-    </widget>
-    <widget class="QTableWidget" name="tableWidget_materials">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>490</y>
-       <width>1531</width>
-       <height>192</height>
-      </rect>
-     </property>
-     <column>
-      <property name="text">
-       <string>Материал</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Наименование</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>ед. измерения</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Количество</string>
-      </property>
-     </column>
-    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
@@ -172,7 +90,7 @@
        <x>10</x>
        <y>10</y>
        <width>941</width>
-       <height>140</height>
+       <height>301</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -190,7 +108,11 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit_prodOrder_id"/>
+       <widget class="QLineEdit" name="lineEdit_prodOrder_id">
+        <property name="text">
+         <string>321549875413164</string>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_dateReg">
@@ -200,7 +122,15 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QDateEdit" name="dateEdit_reg"/>
+       <widget class="QDateEdit" name="dateEdit_reg">
+        <property name="date">
+         <date>
+          <year>2023</year>
+          <month>9</month>
+          <day>10</day>
+         </date>
+        </property>
+       </widget>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_productType">
@@ -234,9 +164,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>690</y>
-       <width>579</width>
-       <height>140</height>
+       <y>630</y>
+       <width>941</width>
+       <height>211</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -254,7 +184,15 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QDateEdit" name="dateEdit_entrance"/>
+       <widget class="QDateEdit" name="dateEdit_entrance">
+        <property name="date">
+         <date>
+          <year>2023</year>
+          <month>1</month>
+          <day>11</day>
+         </date>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_foreman">
@@ -264,7 +202,11 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_foreman"/>
+       <widget class="QLineEdit" name="lineEdit_foreman">
+        <property name="text">
+         <string>Печёнкин Виктор Алексеевич</string>
+        </property>
+       </widget>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_total">
@@ -278,78 +220,36 @@
       </item>
      </layout>
     </widget>
-    <widget class="QPushButton" name="pushButton_steps_add">
+    <widget class="TechnologicalCard" name="card" native="true">
      <property name="geometry">
       <rect>
-       <x>1580</x>
-       <y>280</y>
-       <width>171</width>
-       <height>28</height>
+       <x>10</x>
+       <y>320</y>
+       <width>1530</width>
+       <height>300</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_add">
+     <property name="geometry">
+      <rect>
+       <x>1650</x>
+       <y>320</y>
+       <width>131</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
       <string>Добавить</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_steps_change">
+    <widget class="QPushButton" name="pushButton_delete">
      <property name="geometry">
       <rect>
-       <x>1580</x>
-       <y>330</y>
-       <width>171</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Изменить</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_steps_delete">
-     <property name="geometry">
-      <rect>
-       <x>1580</x>
+       <x>1650</x>
        <y>380</y>
-       <width>171</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Удалить</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_materials_add">
-     <property name="geometry">
-      <rect>
-       <x>1580</x>
-       <y>490</y>
-       <width>171</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Добавить</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_materials_change">
-     <property name="geometry">
-      <rect>
-       <x>1580</x>
-       <y>540</y>
-       <width>171</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Изменить</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_materials_delete">
-     <property name="geometry">
-      <rect>
-       <x>1580</x>
-       <y>590</y>
-       <width>171</width>
-       <height>28</height>
+       <width>131</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
@@ -359,6 +259,14 @@
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TechnologicalCard</class>
+   <extends>QWidget</extends>
+   <header>technologicalcard.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
